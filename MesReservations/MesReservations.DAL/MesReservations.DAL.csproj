@@ -64,58 +64,59 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDD_GRP2.edmx</DependentUpon>
     </Compile>
-    <Compile Include="FONCTIONNALITE.cs">
+    <Compile Include="Fonctionnalite.cs">
       <DependentUpon>BDD_GRP2.tt</DependentUpon>
     </Compile>
-    <Compile Include="GENRE.cs">
+    <Compile Include="Genre.cs">
       <DependentUpon>BDD_GRP2.tt</DependentUpon>
     </Compile>
-    <Compile Include="LIGNE_RESERVATION.cs">
+    <Compile Include="Ligne_Reservation.cs">
       <DependentUpon>BDD_GRP2.tt</DependentUpon>
     </Compile>
-    <Compile Include="PROFIL.cs">
+    <Compile Include="Profil.cs">
       <DependentUpon>BDD_GRP2.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RESERVATION.cs">
+    <Compile Include="Reservation.cs">
       <DependentUpon>BDD_GRP2.tt</DependentUpon>
     </Compile>
-    <Compile Include="RESSOURCE.cs">
+    <Compile Include="Ressource.cs">
       <DependentUpon>BDD_GRP2.tt</DependentUpon>
     </Compile>
-    <Compile Include="UTILISATEUR.cs">
+    <Compile Include="sysdiagrams.cs">
       <DependentUpon>BDD_GRP2.tt</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="BDD_GRP2.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BDD_GRP2.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <Compile Include="Utilisateur.cs">
+      <DependentUpon>BDD_GRP2.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config">
       <SubType>Designer</SubType>
     </None>
+    <EntityDeploy Include="BDD_GRP2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDD_GRP2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="BDD_GRP2.edmx.diagram">
       <DependentUpon>BDD_GRP2.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="BDD_GRP2.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BDD_GRP2.Context.cs</LastGenOutput>
       <DependentUpon>BDD_GRP2.edmx</DependentUpon>
+      <LastGenOutput>BDD_GRP2.Context.cs</LastGenOutput>
     </Content>
     <Content Include="BDD_GRP2.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BDD_GRP2.edmx</DependentUpon>
       <LastGenOutput>BDD_GRP2.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

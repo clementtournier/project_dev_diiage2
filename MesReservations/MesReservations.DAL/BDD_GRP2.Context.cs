@@ -25,12 +25,13 @@ namespace MesReservations.DAL
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<FONCTIONNALITE> FONCTIONNALITE { get; set; }
-        public virtual DbSet<GENRE> GENRE { get; set; }
-        public virtual DbSet<LIGNE_RESERVATION> LIGNE_RESERVATION { get; set; }
-        public virtual DbSet<PROFIL> PROFIL { get; set; }
-        public virtual DbSet<RESERVATION> RESERVATION { get; set; }
-        public virtual DbSet<RESSOURCE> RESSOURCE { get; set; }
-        public virtual DbSet<UTILISATEUR> UTILISATEUR { get; set; }
+        public virtual DbSet<Fonctionnalite> Fonctionnalite { get; set; }
+        public virtual DbSet<Genre> Genre { get; set; }
+        public virtual DbSet<Ligne_Reservation> Ligne_Reservation { get; set; }
+        public virtual DbSet<Profil> Profil { get; set; }
+        public virtual DbSet<Reservation> Reservation { get; set; }
+        public virtual DbSet<Ressource> Ressource { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Utilisateur> Utilisateur { get; set; }
     }
 }

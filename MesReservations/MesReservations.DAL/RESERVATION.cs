@@ -12,12 +12,12 @@ namespace MesReservations.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class RESERVATION
+    public partial class Reservation
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RESERVATION()
+        public Reservation()
         {
-            this.LIGNE_RESERVATION = new HashSet<LIGNE_RESERVATION>();
+            this.Ligne_Reservation = new HashSet<Ligne_Reservation>();
         }
     
         public int ID_Reservation { get; set; }
@@ -28,7 +28,7 @@ namespace MesReservations.DAL
         public int ID_User { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LIGNE_RESERVATION> LIGNE_RESERVATION { get; set; }
-        public virtual UTILISATEUR UTILISATEUR { get; set; }
+        public virtual ICollection<Ligne_Reservation> Ligne_Reservation { get; set; }
+        public virtual Utilisateur Utilisateur { get; set; }
     }
 }

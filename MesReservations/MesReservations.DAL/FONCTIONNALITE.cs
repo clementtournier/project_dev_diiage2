@@ -12,18 +12,18 @@ namespace MesReservations.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class FONCTIONNALITE
+    public partial class Fonctionnalite
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public FONCTIONNALITE()
+        public Fonctionnalite()
         {
-            this.PROFIL = new HashSet<PROFIL>();
+            this.Profil = new HashSet<Profil>();
         }
     
         public int ID_Fonctionnalite { get; set; }
         public string Nom { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PROFIL> PROFIL { get; set; }
+        public virtual ICollection<Profil> Profil { get; set; }
     }
 }

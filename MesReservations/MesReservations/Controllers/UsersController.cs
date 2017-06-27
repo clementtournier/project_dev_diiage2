@@ -16,15 +16,15 @@ namespace MesReservations.Controllers
         public IQueryable<Userm> Get()
         {
 
-            var lesUtilisateurs= db.UTILISATEUR.Select(f => new Userm()
+            var lesUtilisateurs= db.Utilisateur.Select(u => new Userm()
             {
-                Nom = f.Nom,
-               Prenom = f.Prenom,
-                Mail = f.Mail,
-                Password= f.Password,
-                User_ID = f.ID_User,
-                Last_Login= (DateTime)f.Last_login,
-                Deconnexion= (int)f.Deconnexion
+                Nom = u.Nom,
+               Prenom = u.Prenom,
+                Mail = u.Mail,
+                Password= u.Password,
+                NomProfil = db.Profil.Where(v => v.ID_Profil == u.ID_Profil).FirstOrDefault().Nom,
+               Last_Login = (DateTime)u.Last_login,
+               Deconnexion= (int)u.Deconnexion
             });
 
             return lesUtilisateurs;

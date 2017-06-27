@@ -12,12 +12,12 @@ namespace MesReservations.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class UTILISATEUR
+    public partial class Utilisateur
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public UTILISATEUR()
+        public Utilisateur()
         {
-            this.RESERVATION = new HashSet<RESERVATION>();
+            this.Reservation = new HashSet<Reservation>();
         }
     
         public int ID_User { get; set; }
@@ -30,8 +30,8 @@ namespace MesReservations.DAL
         public Nullable<bool> Purge { get; set; }
         public int ID_Profil { get; set; }
     
-        public virtual PROFIL PROFIL { get; set; }
+        public virtual Profil Profil { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RESERVATION> RESERVATION { get; set; }
+        public virtual ICollection<Reservation> Reservation { get; set; }
     }
 }

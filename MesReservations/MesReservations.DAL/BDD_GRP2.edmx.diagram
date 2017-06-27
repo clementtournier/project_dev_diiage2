@@ -4,20 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="48dbbfe6eb57428dbedb84ea67b9ec3b" Name="Diagram1">
-        <EntityTypeShape EntityType="BDD_GRP2Model.FONCTIONNALITE" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BDD_GRP2Model.GENRE" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BDD_GRP2Model.LIGNE_RESERVATION" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BDD_GRP2Model.PROFIL" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BDD_GRP2Model.RESERVATION" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BDD_GRP2Model.RESSOURCE" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BDD_GRP2Model.UTILISATEUR" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+      <Diagram DiagramId="a5e9d55fa901470986eb97d6db47b890" Name="Diagram1">
+        <EntityTypeShape EntityType="BDD_GRP2Model.Fonctionnalite" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDD_GRP2Model.Genre" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDD_GRP2Model.Ligne_Reservation" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDD_GRP2Model.Profil" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDD_GRP2Model.Reservation" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDD_GRP2Model.Ressource" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDD_GRP2Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDD_GRP2Model.Utilisateur" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="BDD_GRP2Model.FK__RESSOURCE__ID_Ge__2D27B809" ManuallyRouted="false" />
         <AssociationConnector Association="BDD_GRP2Model.FK__LIGNE_RES__ID_Re__35BCFE0A" ManuallyRouted="false" />
         <AssociationConnector Association="BDD_GRP2Model.FK__LIGNE_RES__ID_Re__36B12243" ManuallyRouted="false" />
         <AssociationConnector Association="BDD_GRP2Model.FK__UTILISATE__ID_Pr__300424B4" ManuallyRouted="false" />
         <AssociationConnector Association="BDD_GRP2Model.FK__RESERVATI__ID_Us__32E0915F" ManuallyRouted="false" />
-        <AssociationConnector Association="BDD_GRP2Model.ACCEDER" ManuallyRouted="false" />
+        <AssociationConnector Association="BDD_GRP2Model.Acceder" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

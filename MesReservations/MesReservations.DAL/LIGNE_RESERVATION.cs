@@ -12,7 +12,7 @@ namespace MesReservations.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class LIGNE_RESERVATION
+    public partial class Ligne_Reservation
     {
         public int ID_Ligne_Reservation { get; set; }
         public Nullable<System.DateTime> Date_Debut { get; set; }
@@ -21,7 +21,7 @@ namespace MesReservations.DAL
         public int ID_Ressource { get; set; }
         public int ID_Reservation { get; set; }
     
-        public virtual RESSOURCE RESSOURCE { get; set; }
-        public virtual RESERVATION RESERVATION { get; set; }
+        public virtual Ressource Ressource { get; set; }
+        public virtual Reservation Reservation { get; set; }
     }
 }

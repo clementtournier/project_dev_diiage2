@@ -12,21 +12,21 @@ namespace MesReservations.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class PROFIL
+    public partial class Profil
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PROFIL()
+        public Profil()
         {
-            this.UTILISATEUR = new HashSet<UTILISATEUR>();
-            this.FONCTIONNALITE = new HashSet<FONCTIONNALITE>();
+            this.Utilisateur = new HashSet<Utilisateur>();
+            this.Fonctionnalite = new HashSet<Fonctionnalite>();
         }
     
         public int ID_Profil { get; set; }
-        public string Nom { get; set; }
+        public string NomProfil { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UTILISATEUR> UTILISATEUR { get; set; }
+        public virtual ICollection<Utilisateur> Utilisateur { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FONCTIONNALITE> FONCTIONNALITE { get; set; }
+        public virtual ICollection<Fonctionnalite> Fonctionnalite { get; set; }
     }
 }

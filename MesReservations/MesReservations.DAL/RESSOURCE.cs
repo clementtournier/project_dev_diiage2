@@ -12,12 +12,12 @@ namespace MesReservations.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class RESSOURCE
+    public partial class Ressource
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public RESSOURCE()
+        public Ressource()
         {
-            this.LIGNE_RESERVATION = new HashSet<LIGNE_RESERVATION>();
+            this.Ligne_Reservation = new HashSet<Ligne_Reservation>();
         }
     
         public int ID_Ressource { get; set; }
@@ -29,8 +29,8 @@ namespace MesReservations.DAL
         public Nullable<bool> Purge { get; set; }
         public int ID_Genre { get; set; }
     
-        public virtual GENRE GENRE { get; set; }
+        public virtual Genre Genre { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LIGNE_RESERVATION> LIGNE_RESERVATION { get; set; }
+        public virtual ICollection<Ligne_Reservation> Ligne_Reservation { get; set; }
     }
 }
