@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDD_GRP2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACCEDER">
+    <Key>
+      <PropertyRef Name="ID_Profil" />
+      <PropertyRef Name="ID_Fonctionnalite" />
+    </Key>
+    <Property Name="ID_Profil" Type="int" Nullable="false" />
+    <Property Name="ID_Fonctionnalite" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FONCTIONNALITE">
+    <Key>
+      <PropertyRef Name="ID_Fonctionnalite" />
+    </Key>
+    <Property Name="ID_Fonctionnalite" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GENRE">
+    <Key>
+      <PropertyRef Name="ID_Genre" />
+    </Key>
+    <Property Name="ID_Genre" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="250" />
+    <Property Name="Purge" Type="bit" />
+  </EntityType>
+  <EntityType Name="LIGNE_RESERVATION">
+    <Key>
+      <PropertyRef Name="ID_Ligne_Reservation" />
+    </Key>
+    <Property Name="ID_Ligne_Reservation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date_Debut" Type="date" />
+    <Property Name="Date_Fin" Type="date" />
+    <Property Name="Purge" Type="bit" />
+    <Property Name="ID_Ressource" Type="int" Nullable="false" />
+    <Property Name="ID_Reservation" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROFIL">
+    <Key>
+      <PropertyRef Name="ID_Profil" />
+    </Key>
+    <Property Name="ID_Profil" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RESERVATION">
+    <Key>
+      <PropertyRef Name="ID_Reservation" />
+    </Key>
+    <Property Name="ID_Reservation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date_Debut_Reservation" Type="date" />
+    <Property Name="Date_Fin_Reservation" Type="date" />
+    <Property Name="Date_Reservation" Type="date" />
+    <Property Name="Purge" Type="bit" />
+    <Property Name="ID_User" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RESSOURCE">
+    <Key>
+      <PropertyRef Name="ID_Ressource" />
+    </Key>
+    <Property Name="ID_Ressource" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="varchar" MaxLength="50" />
+    <Property Name="Disponibilite" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="Date_Achat" Type="date" />
+    <Property Name="QRCode" Type="varchar" MaxLength="100" />
+    <Property Name="Purge" Type="bit" />
+    <Property Name="ID_Genre" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UTILISATEUR">
+    <Key>
+      <PropertyRef Name="ID_User" />
+    </Key>
+    <Property Name="ID_User" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="varchar" MaxLength="50" />
+    <Property Name="Prenom" Type="varchar" MaxLength="50" />
+    <Property Name="Mail" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Last_login" Type="date" />
+    <Property Name="Deconnexion" Type="int" />
+    <Property Name="Purge" Type="bit" />
+    <Property Name="ID_Profil" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__ACCEDER__ID_Fonc__2A4B4B5E">
+    <End Role="FONCTIONNALITE" Type="Self.FONCTIONNALITE" Multiplicity="1" />
+    <End Role="ACCEDER" Type="Self.ACCEDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FONCTIONNALITE">
+        <PropertyRef Name="ID_Fonctionnalite" />
+      </Principal>
+      <Dependent Role="ACCEDER">
+        <PropertyRef Name="ID_Fonctionnalite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ACCEDER__ID_Prof__29572725">
+    <End Role="PROFIL" Type="Self.PROFIL" Multiplicity="1" />
+    <End Role="ACCEDER" Type="Self.ACCEDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROFIL">
+        <PropertyRef Name="ID_Profil" />
+      </Principal>
+      <Dependent Role="ACCEDER">
+        <PropertyRef Name="ID_Profil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LIGNE_RES__ID_Re__35BCFE0A">
+    <End Role="RESSOURCE" Type="Self.RESSOURCE" Multiplicity="1" />
+    <End Role="LIGNE_RESERVATION" Type="Self.LIGNE_RESERVATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESSOURCE">
+        <PropertyRef Name="ID_Ressource" />
+      </Principal>
+      <Dependent Role="LIGNE_RESERVATION">
+        <PropertyRef Name="ID_Ressource" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LIGNE_RES__ID_Re__36B12243">
+    <End Role="RESERVATION" Type="Self.RESERVATION" Multiplicity="1" />
+    <End Role="LIGNE_RESERVATION" Type="Self.LIGNE_RESERVATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESERVATION">
+        <PropertyRef Name="ID_Reservation" />
+      </Principal>
+      <Dependent Role="LIGNE_RESERVATION">
+        <PropertyRef Name="ID_Reservation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RESERVATI__ID_Us__32E0915F">
+    <End Role="UTILISATEUR" Type="Self.UTILISATEUR" Multiplicity="1" />
+    <End Role="RESERVATION" Type="Self.RESERVATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UTILISATEUR">
+        <PropertyRef Name="ID_User" />
+      </Principal>
+      <Dependent Role="RESERVATION">
+        <PropertyRef Name="ID_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RESSOURCE__ID_Ge__2D27B809">
+    <End Role="GENRE" Type="Self.GENRE" Multiplicity="1" />
+    <End Role="RESSOURCE" Type="Self.RESSOURCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GENRE">
+        <PropertyRef Name="ID_Genre" />
+      </Principal>
+      <Dependent Role="RESSOURCE">
+        <PropertyRef Name="ID_Genre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UTILISATE__ID_Pr__300424B4">
+    <End Role="PROFIL" Type="Self.PROFIL" Multiplicity="1" />
+    <End Role="UTILISATEUR" Type="Self.UTILISATEUR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROFIL">
+        <PropertyRef Name="ID_Profil" />
+      </Principal>
+      <Dependent Role="UTILISATEUR">
+        <PropertyRef Name="ID_Profil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BDD_GRP2ModelStoreContainer">
+    <EntitySet Name="ACCEDER" EntityType="Self.ACCEDER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FONCTIONNALITE" EntityType="Self.FONCTIONNALITE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GENRE" EntityType="Self.GENRE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIGNE_RESERVATION" EntityType="Self.LIGNE_RESERVATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROFIL" EntityType="Self.PROFIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RESERVATION" EntityType="Self.RESERVATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RESSOURCE" EntityType="Self.RESSOURCE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UTILISATEUR" EntityType="Self.UTILISATEUR" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ACCEDER__ID_Fonc__2A4B4B5E" Association="Self.FK__ACCEDER__ID_Fonc__2A4B4B5E">
+      <End Role="FONCTIONNALITE" EntitySet="FONCTIONNALITE" />
+      <End Role="ACCEDER" EntitySet="ACCEDER" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ACCEDER__ID_Prof__29572725" Association="Self.FK__ACCEDER__ID_Prof__29572725">
+      <End Role="PROFIL" EntitySet="PROFIL" />
+      <End Role="ACCEDER" EntitySet="ACCEDER" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LIGNE_RES__ID_Re__35BCFE0A" Association="Self.FK__LIGNE_RES__ID_Re__35BCFE0A">
+      <End Role="RESSOURCE" EntitySet="RESSOURCE" />
+      <End Role="LIGNE_RESERVATION" EntitySet="LIGNE_RESERVATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LIGNE_RES__ID_Re__36B12243" Association="Self.FK__LIGNE_RES__ID_Re__36B12243">
+      <End Role="RESERVATION" EntitySet="RESERVATION" />
+      <End Role="LIGNE_RESERVATION" EntitySet="LIGNE_RESERVATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RESERVATI__ID_Us__32E0915F" Association="Self.FK__RESERVATI__ID_Us__32E0915F">
+      <End Role="UTILISATEUR" EntitySet="UTILISATEUR" />
+      <End Role="RESERVATION" EntitySet="RESERVATION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RESSOURCE__ID_Ge__2D27B809" Association="Self.FK__RESSOURCE__ID_Ge__2D27B809">
+      <End Role="GENRE" EntitySet="GENRE" />
+      <End Role="RESSOURCE" EntitySet="RESSOURCE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UTILISATE__ID_Pr__300424B4" Association="Self.FK__UTILISATE__ID_Pr__300424B4">
+      <End Role="PROFIL" EntitySet="PROFIL" />
+      <End Role="UTILISATEUR" EntitySet="UTILISATEUR" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

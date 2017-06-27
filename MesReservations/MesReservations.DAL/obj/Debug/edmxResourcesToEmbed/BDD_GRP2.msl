@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BDD_GRP2ModelStoreContainer" CdmEntityContainer="BDD_GRP2Entities">
+    <EntitySetMapping Name="FONCTIONNALITE">
+      <EntityTypeMapping TypeName="BDD_GRP2Model.FONCTIONNALITE">
+        <MappingFragment StoreEntitySet="FONCTIONNALITE">
+          <ScalarProperty Name="ID_Fonctionnalite" ColumnName="ID_Fonctionnalite" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GENRE">
+      <EntityTypeMapping TypeName="BDD_GRP2Model.GENRE">
+        <MappingFragment StoreEntitySet="GENRE">
+          <ScalarProperty Name="ID_Genre" ColumnName="ID_Genre" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Purge" ColumnName="Purge" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIGNE_RESERVATION">
+      <EntityTypeMapping TypeName="BDD_GRP2Model.LIGNE_RESERVATION">
+        <MappingFragment StoreEntitySet="LIGNE_RESERVATION">
+          <ScalarProperty Name="ID_Ligne_Reservation" ColumnName="ID_Ligne_Reservation" />
+          <ScalarProperty Name="Date_Debut" ColumnName="Date_Debut" />
+          <ScalarProperty Name="Date_Fin" ColumnName="Date_Fin" />
+          <ScalarProperty Name="Purge" ColumnName="Purge" />
+          <ScalarProperty Name="ID_Ressource" ColumnName="ID_Ressource" />
+          <ScalarProperty Name="ID_Reservation" ColumnName="ID_Reservation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROFIL">
+      <EntityTypeMapping TypeName="BDD_GRP2Model.PROFIL">
+        <MappingFragment StoreEntitySet="PROFIL">
+          <ScalarProperty Name="ID_Profil" ColumnName="ID_Profil" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESERVATION">
+      <EntityTypeMapping TypeName="BDD_GRP2Model.RESERVATION">
+        <MappingFragment StoreEntitySet="RESERVATION">
+          <ScalarProperty Name="ID_Reservation" ColumnName="ID_Reservation" />
+          <ScalarProperty Name="Date_Debut_Reservation" ColumnName="Date_Debut_Reservation" />
+          <ScalarProperty Name="Date_Fin_Reservation" ColumnName="Date_Fin_Reservation" />
+          <ScalarProperty Name="Date_Reservation" ColumnName="Date_Reservation" />
+          <ScalarProperty Name="Purge" ColumnName="Purge" />
+          <ScalarProperty Name="ID_User" ColumnName="ID_User" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESSOURCE">
+      <EntityTypeMapping TypeName="BDD_GRP2Model.RESSOURCE">
+        <MappingFragment StoreEntitySet="RESSOURCE">
+          <ScalarProperty Name="ID_Ressource" ColumnName="ID_Ressource" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Disponibilite" ColumnName="Disponibilite" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Date_Achat" ColumnName="Date_Achat" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+          <ScalarProperty Name="Purge" ColumnName="Purge" />
+          <ScalarProperty Name="ID_Genre" ColumnName="ID_Genre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UTILISATEUR">
+      <EntityTypeMapping TypeName="BDD_GRP2Model.UTILISATEUR">
+        <MappingFragment StoreEntitySet="UTILISATEUR">
+          <ScalarProperty Name="ID_User" ColumnName="ID_User" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Last_login" ColumnName="Last_login" />
+          <ScalarProperty Name="Deconnexion" ColumnName="Deconnexion" />
+          <ScalarProperty Name="Purge" ColumnName="Purge" />
+          <ScalarProperty Name="ID_Profil" ColumnName="ID_Profil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ACCEDER" TypeName="BDD_GRP2Model.ACCEDER" StoreEntitySet="ACCEDER">
+      <EndProperty Name="FONCTIONNALITE">
+        <ScalarProperty Name="ID_Fonctionnalite" ColumnName="ID_Fonctionnalite" />
+      </EndProperty>
+      <EndProperty Name="PROFIL">
+        <ScalarProperty Name="ID_Profil" ColumnName="ID_Profil" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
