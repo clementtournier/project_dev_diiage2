@@ -32,5 +32,21 @@ namespace MesReservations.BL
 
             return userAll;
         }
+        public Userm getUserbyId(int id)
+        {
+
+            var UtilisateurById = db.Utilisateur.Where(p => p.ID_User == id).Select(u => new Userm()
+            {
+                Nom_User = u.Nom_Utilisateur,
+                Prenom = u.Prenom,
+                Mail = u.Mail,
+                Password = u.Password,
+                Nom_Profil = db.Profil.Where(v => v.ID_Profil == u.ID_Profil).FirstOrDefault().Nom_Profil,
+                Last_Login = (DateTime)u.Last_login,
+                Deconnexion = (int)u.Deconnexion,
+                Purge = (Boolean)u.Purge
+            }).FirstOrDefault();
+            return UtilisateurById;
+        }
     }
 }
