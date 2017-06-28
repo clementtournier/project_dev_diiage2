@@ -32,17 +32,16 @@ namespace MesReservations.WEB.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             //Utilisateur utilisateur = db.Utilisateur.Find(id);
-            List<Userm> utilisateurs = new List<Userm>();
-            utilisateurs = BLuser.getUserAll();
-            Userm user_id = new Userm();
-            user_id = utilisateurs.FirstOrDefault(p => p.ID_User == id);
+            Userm utilisateur = new Userm();
+            utilisateur = BLuser.getUserbyId((int)id);
+           
 
 
-            if (user_id == null)
+            if (utilisateur.ID_User == null)
             {
                 return HttpNotFound();
             }
-            return View(utilisateurs);
+            return View(utilisateur);
         }
 
         // GET: Utilisateurs/Create

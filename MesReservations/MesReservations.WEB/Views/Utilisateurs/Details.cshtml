@@ -1,4 +1,4 @@
-﻿@model List<MesReservations.Models.Userm>
+﻿@model MesReservations.Models.Userm
 
 @{
     ViewBag.Title = "Details";
@@ -11,11 +11,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Nom_Utilisateur)
+            @Html.DisplayNameFor(model => model.Nom_User)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Nom_Utilisateur)
+            @Html.DisplayFor(model => model.Nom_User)
         </dd>
 
         <dt>
@@ -43,11 +43,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Last_login)
+            @Html.DisplayNameFor(model => model.Last_Login)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Last_login)
+            @Html.DisplayFor(model => model.Last_Login)
         </dd>
 
         <dt>
@@ -67,11 +67,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Profil.Nom_Profil)
+            @Html.DisplayNameFor(model => model.Nom_Profil)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Profil.Nom_Profil)
+            @Html.DisplayFor(model => model.Nom_Profil)
         </dd>
 
     </dl>
