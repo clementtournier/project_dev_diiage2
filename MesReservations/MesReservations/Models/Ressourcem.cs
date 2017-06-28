@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MesReservations.Models
 {
-    class Ressourcem
+    public class Ressourcem
     {
         //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Nom_Ressource
         public string Nom_Ressource { get; set; }
@@ -22,5 +22,20 @@ namespace MesReservations.Models
         public Boolean Purge { get; set; }
         //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Nom_Genre
         public string Nom_Genre { get; set; }
+
+        public Ressourcem()
+        {
+
+        }
+        public Ressourcem(string n, int di, string de, DateTime da, string qcr, Boolean pu, string ng)
+        {
+            Nom_Ressource = n;
+            Disponibilite = di;
+            Description = de;
+            Date_Achat = da;
+            QRCode = qcr;
+            Purge = pu;
+            Nom_Genre = ng;
+        }
     }
 }
