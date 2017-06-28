@@ -9,7 +9,7 @@ namespace MesReservations.Models
     class Ressourcem
     {
         //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Nom_Ressource
-        public string Nom { get; set; }
+        public string Nom_Ressource { get; set; }
         //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Disponibilite
         public int Disponibilite { get; set; }
         //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Description

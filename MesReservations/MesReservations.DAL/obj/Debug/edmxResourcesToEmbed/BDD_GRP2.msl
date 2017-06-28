@@ -5,7 +5,7 @@
       <EntityTypeMapping TypeName="BDD_GRP2Model.Fonctionnalite">
         <MappingFragment StoreEntitySet="Fonctionnalite">
           <ScalarProperty Name="ID_Fonctionnalite" ColumnName="ID_Fonctionnalite" />
-          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Nom_Fonctionnalite" ColumnName="Nom_Fonctionnalite" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -13,7 +13,7 @@
       <EntityTypeMapping TypeName="BDD_GRP2Model.Genre">
         <MappingFragment StoreEntitySet="Genre">
           <ScalarProperty Name="ID_Genre" ColumnName="ID_Genre" />
-          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Nom_Genre" ColumnName="Nom_Genre" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Purge" ColumnName="Purge" />
         </MappingFragment>
@@ -35,7 +35,7 @@
       <EntityTypeMapping TypeName="BDD_GRP2Model.Profil">
         <MappingFragment StoreEntitySet="Profil">
           <ScalarProperty Name="ID_Profil" ColumnName="ID_Profil" />
-          <ScalarProperty Name="NomProfil" ColumnName="NomProfil" />
+          <ScalarProperty Name="Nom_Profil" ColumnName="Nom_Profil" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -55,7 +55,7 @@
       <EntityTypeMapping TypeName="BDD_GRP2Model.Ressource">
         <MappingFragment StoreEntitySet="Ressource">
           <ScalarProperty Name="ID_Ressource" ColumnName="ID_Ressource" />
-          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Nom_Ressource" ColumnName="Nom_Ressource" />
           <ScalarProperty Name="Disponibilite" ColumnName="Disponibilite" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Date_Achat" ColumnName="Date_Achat" />
@@ -80,7 +80,7 @@
       <EntityTypeMapping TypeName="BDD_GRP2Model.Utilisateur">
         <MappingFragment StoreEntitySet="Utilisateur">
           <ScalarProperty Name="ID_User" ColumnName="ID_User" />
-          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Nom_Utilisateur" ColumnName="Nom_Utilisateur" />
           <ScalarProperty Name="Prenom" ColumnName="Prenom" />
           <ScalarProperty Name="Mail" ColumnName="Mail" />
           <ScalarProperty Name="Password" ColumnName="Password" />

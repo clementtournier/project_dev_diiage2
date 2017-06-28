@@ -39,7 +39,7 @@ namespace MesReservations.WEB.Controllers
         // GET: Utilisateurs/Create
         public ActionResult Create()
         {
-            ViewBag.ID_Profil = new SelectList(db.Profil, "ID_Profil", "Nom");
+            ViewBag.ID_Profil = new SelectList(db.Profil, "ID_Profil", "Nom_Profil");
             return View();
         }
 
@@ -48,7 +48,7 @@ namespace MesReservations.WEB.Controllers
         // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_User,Nom,Prenom,Mail,Password,Last_login,Deconnexion,Purge,ID_Profil")] Utilisateur utilisateur)
+        public ActionResult Create([Bind(Include = "ID_User,Nom_Utilisateur,Prenom,Mail,Password,Last_login,Deconnexion,Purge,ID_Profil")] Utilisateur utilisateur)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +57,7 @@ namespace MesReservations.WEB.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ID_Profil = new SelectList(db.Profil, "ID_Profil", "Nom", utilisateur.ID_Profil);
+            ViewBag.ID_Profil = new SelectList(db.Profil, "ID_Profil", "Nom_Profil", utilisateur.ID_Profil);
             return View(utilisateur);
         }
 
@@ -73,7 +73,7 @@ namespace MesReservations.WEB.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ID_Profil = new SelectList(db.Profil, "ID_Profil", "Nom", utilisateur.ID_Profil);
+            ViewBag.ID_Profil = new SelectList(db.Profil, "ID_Profil", "Nom_Profil", utilisateur.ID_Profil);
             return View(utilisateur);
         }
 
@@ -82,7 +82,7 @@ namespace MesReservations.WEB.Controllers
         // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_User,Nom,Prenom,Mail,Password,Last_login,Deconnexion,Purge,ID_Profil")] Utilisateur utilisateur)
+        public ActionResult Edit([Bind(Include = "ID_User,Nom_Utilisateur,Prenom,Mail,Password,Last_login,Deconnexion,Purge,ID_Profil")] Utilisateur utilisateur)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace MesReservations.WEB.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ID_Profil = new SelectList(db.Profil, "ID_Profil", "Nom", utilisateur.ID_Profil);
+            ViewBag.ID_Profil = new SelectList(db.Profil, "ID_Profil", "Nom_Profil", utilisateur.ID_Profil);
             return View(utilisateur);
         }
 

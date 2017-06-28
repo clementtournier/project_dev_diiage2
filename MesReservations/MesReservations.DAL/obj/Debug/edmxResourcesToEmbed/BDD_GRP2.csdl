@@ -5,7 +5,7 @@
       <PropertyRef Name="ID_Fonctionnalite" />
     </Key>
     <Property Name="ID_Fonctionnalite" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nom_Fonctionnalite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Profil" Relationship="Self.Acceder" FromRole="Fonctionnalite" ToRole="Profil" />
   </EntityType>
   <EntityType Name="Genre">
@@ -13,7 +13,7 @@
       <PropertyRef Name="ID_Genre" />
     </Key>
     <Property Name="ID_Genre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nom_Genre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
     <Property Name="Purge" Type="Boolean" />
     <NavigationProperty Name="Ressource" Relationship="Self.FK__RESSOURCE__ID_Ge__2D27B809" FromRole="Genre" ToRole="Ressource" />
@@ -36,7 +36,7 @@
       <PropertyRef Name="ID_Profil" />
     </Key>
     <Property Name="ID_Profil" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="NomProfil" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nom_Profil" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Utilisateur" Relationship="Self.FK__UTILISATE__ID_Pr__300424B4" FromRole="Profil" ToRole="Utilisateur" />
     <NavigationProperty Name="Fonctionnalite" Relationship="Self.Acceder" FromRole="Profil" ToRole="Fonctionnalite" />
   </EntityType>
@@ -58,7 +58,7 @@
       <PropertyRef Name="ID_Ressource" />
     </Key>
     <Property Name="ID_Ressource" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nom_Ressource" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Disponibilite" Type="Int32" />
     <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Date_Achat" Type="DateTime" Precision="0" />
@@ -83,7 +83,7 @@
       <PropertyRef Name="ID_User" />
     </Key>
     <Property Name="ID_User" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nom_Utilisateur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />

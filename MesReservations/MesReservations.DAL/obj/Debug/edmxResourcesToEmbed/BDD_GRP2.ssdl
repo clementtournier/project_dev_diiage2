@@ -13,14 +13,14 @@
       <PropertyRef Name="ID_Fonctionnalite" />
     </Key>
     <Property Name="ID_Fonctionnalite" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nom" Type="varchar" MaxLength="50" />
+    <Property Name="Nom_Fonctionnalite" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Genre">
     <Key>
       <PropertyRef Name="ID_Genre" />
     </Key>
     <Property Name="ID_Genre" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nom" Type="varchar" MaxLength="50" />
+    <Property Name="Nom_Genre" Type="varchar" MaxLength="50" />
     <Property Name="Description" Type="varchar" MaxLength="250" />
     <Property Name="Purge" Type="bit" />
   </EntityType>
@@ -40,7 +40,7 @@
       <PropertyRef Name="ID_Profil" />
     </Key>
     <Property Name="ID_Profil" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="NomProfil" Type="varchar" MaxLength="50" />
+    <Property Name="Nom_Profil" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Reservation">
     <Key>
@@ -58,7 +58,7 @@
       <PropertyRef Name="ID_Ressource" />
     </Key>
     <Property Name="ID_Ressource" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nom" Type="varchar" MaxLength="50" />
+    <Property Name="Nom_Ressource" Type="varchar" MaxLength="50" />
     <Property Name="Disponibilite" Type="int" />
     <Property Name="Description" Type="varchar" MaxLength="50" />
     <Property Name="Date_Achat" Type="date" />
@@ -81,7 +81,7 @@
       <PropertyRef Name="ID_User" />
     </Key>
     <Property Name="ID_User" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nom" Type="varchar" MaxLength="50" />
+    <Property Name="Nom_Utilisateur" Type="varchar" MaxLength="50" />
     <Property Name="Prenom" Type="varchar" MaxLength="50" />
     <Property Name="Mail" Type="varchar" MaxLength="50" />
     <Property Name="Password" Type="varchar" MaxLength="50" />
