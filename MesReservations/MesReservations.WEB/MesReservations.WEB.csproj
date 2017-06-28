@@ -217,9 +217,17 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MesReservations.BL\MesReservations.BL.csproj">
+      <Project>{6ad7267f-cf5d-4f0f-b3db-efffef74ff24}</Project>
+      <Name>MesReservations.BL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MesReservations.DAL\MesReservations.DAL.csproj">
       <Project>{597f368e-9ba6-4172-9519-7d699fb47214}</Project>
       <Name>MesReservations.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MesReservations.MODEL\MesReservations.MODEL.csproj">
+      <Project>{02c339f5-6ed3-4e28-b7d3-e0d21087f711}</Project>
+      <Name>MesReservations.MODEL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

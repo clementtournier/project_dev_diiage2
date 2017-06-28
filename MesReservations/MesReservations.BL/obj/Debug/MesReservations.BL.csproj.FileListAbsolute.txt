@@ -1,0 +1,34 @@
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\obj\Debug\MesReservations.BL.csprojResolveAssemblyReference.cache
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.BL.dll.config
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.BL.dll
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.BL.pdb
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\EntityFramework.dll
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\EntityFramework.SqlServer.dll
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.DAL.dll
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.MODEL.dll
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.DAL.pdb
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.DAL.dll.config
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.MODEL.pdb
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\EntityFramework.xml
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\EntityFramework.SqlServer.xml
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\fr\EntityFramework.resources.dll
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\obj\Debug\MesReservations.BL.dll
+G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\obj\Debug\MesReservations.BL.pdb
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.BL.dll.config
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.BL.dll
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.BL.pdb
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\EntityFramework.dll
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.DAL.dll
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.MODEL.dll
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.DAL.pdb
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.DAL.dll.config
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\MesReservations.MODEL.pdb
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\EntityFramework.xml
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\obj\Debug\MesReservations.BL.csprojResolveAssemblyReference.cache
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\obj\Debug\MesReservations.BL.dll
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.BL\obj\Debug\MesReservations.BL.pdb
