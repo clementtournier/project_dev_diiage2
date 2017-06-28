@@ -7,20 +7,23 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MesReservations.DAL;
-
+using MesReservations.Models;
+using MesReservations.BL;
 namespace MesReservations.WEB.Controllers
 {
     public class UtilisateursController : Controller
     {
         private BDD_GRP2Entities db = new BDD_GRP2Entities();
-
+        private UtilisateurBL BLuser = new UtilisateurBL();
         // GET: Utilisateurs
         public ActionResult Index()
         {
-            var utilisateur = db.Utilisateur.Include(u => u.Profil).Where(w => w.Purge != true);
-            return View(utilisateur.ToList());
+            //var utilisateur = db.Utilisateur.Include(u => u.Profil).Where(w => w.Purge != true);
+            //return View(utilisateur.ToList());
+            List<Userm> utilisateur = new List<Userm>();
+            utilisateur = BLuser.getUserAll();
+            return View(utilisateur);
         }
-
         // GET: Utilisateurs/Details/5
         public ActionResult Details(int? id)
         {
@@ -28,12 +31,18 @@ namespace MesReservations.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Utilisateur utilisateur = db.Utilisateur.Find(id);
-            if (utilisateur == null)
+            //Utilisateur utilisateur = db.Utilisateur.Find(id);
+            List<Userm> utilisateurs = new List<Userm>();
+            utilisateurs = BLuser.getUserAll();
+            Userm user_id = new Userm();
+            user_id = utilisateurs.FirstOrDefault(p => p.ID_User == id);
+
+
+            if (user_id == null)
             {
                 return HttpNotFound();
             }
-            return View(utilisateur);
+            return View(utilisateurs);
         }
 
         // GET: Utilisateurs/Create

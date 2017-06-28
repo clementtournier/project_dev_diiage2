@@ -23,22 +23,25 @@ namespace MesReservations.Models
         public int Deconnexion { get; set; }
         //définition public du getter permettant d'acceder au données et du setter permettant de modifier les données pour l'attribut Purge
         public Boolean Purge { get; set; }
+        //définition public du getter permettant d'acceder au données et du setter permettant de modifier les données pour l'attribut ID_User
+        public int ID_User { get; set; }
         //Constructeur Vide qui permet l'utilisation du model sans utiliser tous les attributs
         public Userm()
         {
 
         }
         //Contructeur par défaut avec tout les attributs
-        public Userm(string n, string pr, string m, string pa, string np,DateTime ll, int d,Boolean pu)
+        public Userm(string n, string pr, string m, string pa, string np,DateTime ll, int d,Boolean pu, int uid)
         {
             Nom_User = n;
             Prenom = pr;
             Mail = m;
             Password = pa;
             Nom_Profil = np;
-           Last_Login = ll;
-           Deconnexion = d;
+            Last_Login = ll;
+            Deconnexion = d;
             Purge = pu;
+            ID_User = uid;
         }
     }
 }

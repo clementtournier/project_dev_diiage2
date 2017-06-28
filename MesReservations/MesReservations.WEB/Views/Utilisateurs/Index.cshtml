@@ -1,75 +1,77 @@
-﻿@model IEnumerable<MesReservations.DAL.Utilisateur>
+﻿@*@model IEnumerable<MesReservations.DAL.Utilisateur>*@
+@model List<MesReservations.Models.Userm>
+    @{
+        ViewBag.Title = "Index";
+        
+    }
 
-@{
-    ViewBag.Title = "Index";
-}
+    <h2>Index</h2>
 
-<h2>Index</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+               <h4>Nom Utilisateur</h4>
+            </th>
+            <th>
+               <h4>Prenom</h4>
+            </th>
+            <th>
+                <h4>Email</h4>
+            </th>
+            <th>
+                <h4>Password</h4>
+            </th>
+            <th>
+                <h4>Last_Login</h4>
+            </th>
+            <th>
+               <h4>Deconnexion</h4>
+            </th>
+            <th>
+                <h4>Purge</h4>
+            </th>
+            <th>
+              <h4>Nom Profil</h4>
+            </th>
+            <th></th>
+        </tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nom_Utilisateur)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Prenom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Mail)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Password)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Last_login)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Deconnexion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Purge)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Profil.Nom_Profil)
-        </th>
-        <th></th>
-    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nom_User)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prenom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Last_Login)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Deconnexion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Purge)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nom_Profil)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID_User}) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID_User }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID_User })
+                </td>
+            </tr>
+        }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nom_Utilisateur)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Prenom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Mail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Last_login)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Deconnexion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Purge)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Profil.Nom_Profil)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_User }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_User }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_User })
-        </td>
-    </tr>
-}
-
-</table>
+    </table>

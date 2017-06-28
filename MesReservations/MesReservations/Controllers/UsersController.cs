@@ -14,15 +14,11 @@ namespace MesReservations.Controllers
     {
         private UtilisateurBL BLuser = new UtilisateurBL();
 
-       
-
         //private BDD_GRP2Entities db = new BDD_GRP2Entities();
         // GET: api/Users
         public List<Userm> Get()
         {
             return BLuser.getUserAll();
-
-            
         }
 
         // GET: api/Users/5

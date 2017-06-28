@@ -164,3 +164,8 @@ G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservation
 G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.WEB\obj\Debug\MesReservations.WEB.csprojResolveAssemblyReference.cache
 G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.WEB\obj\Debug\MesReservations.WEB.dll
 G:\Visual Studio\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.WEB\obj\Debug\MesReservations.WEB.pdb
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.WEB\bin\MesReservations.BL.dll
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.WEB\bin\MesReservations.MODEL.dll
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.WEB\bin\MesReservations.BL.pdb
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.WEB\bin\MesReservations.BL.dll.config
+C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.WEB\bin\MesReservations.MODEL.pdb

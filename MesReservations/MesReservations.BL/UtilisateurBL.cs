@@ -22,7 +22,8 @@ namespace MesReservations.BL
                 Nom_Profil = db.Profil.Where(v => v.ID_Profil == u.ID_Profil).FirstOrDefault().Nom_Profil,
                 Last_Login = (DateTime)u.Last_login,
                 Deconnexion = (int)u.Deconnexion,
-                Purge = (Boolean)u.Purge
+                Purge = (Boolean)u.Purge,
+                ID_User = (int)u.ID_User
             });
             
             List<Userm> userAll = new List<Userm>();
