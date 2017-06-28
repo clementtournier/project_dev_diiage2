@@ -21,7 +21,7 @@ namespace MesReservations.DAL
         }
     
         public int ID_Genre { get; set; }
-        public string Nom { get; set; }
+        public string Nom_Genre { get; set; }
         public string Description { get; set; }
         public Nullable<bool> Purge { get; set; }
     

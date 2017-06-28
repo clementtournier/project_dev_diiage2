@@ -21,7 +21,7 @@ namespace MesReservations.DAL
         }
     
         public int ID_Ressource { get; set; }
-        public string Nom { get; set; }
+        public string Nom_Ressource { get; set; }
         public Nullable<int> Disponibilite { get; set; }
         public string Description { get; set; }
         public Nullable<System.DateTime> Date_Achat { get; set; }

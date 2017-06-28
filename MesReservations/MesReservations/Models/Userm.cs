@@ -7,16 +7,16 @@ namespace MesReservations.Models
 {
     public class Userm
     {
-        //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Nom
-        public string Nom { get; set; }
+        //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Nom_User
+        public string Nom_User{ get; set; }
         //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Prenom
         public string Prenom { get; set; }
         //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Mail
         public string Mail { get; set; }
         //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Password
         public string Password { get; set; }
-        //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut NomProfil
-        public string NomProfil { get; set; }
+        //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Nom_Profil
+        public string Nom_Profil { get; set; }
         //définition public du getter permettant d'acceder au données et du setter permettant de modifier les données pour l'attribut Last_Login
        public DateTime Last_Login { get; set; }
         //définition public du getter permettant d'acceder au données et du setter permettant de modifier les données pour l'attribut Déconnexion
@@ -29,11 +29,11 @@ namespace MesReservations.Models
         //Contructeur par défaut avec tout les attributs
         public Userm(string n, string pr, string m, string pa, string np,DateTime ll, int d)
         {
-            Nom = n;
+            Nom_User = n;
             Prenom = pr;
             Mail = m;
             Password = pa;
-            NomProfil = np;
+            Nom_Profil = np;
            Last_Login = ll;
            Deconnexion = d;
         }

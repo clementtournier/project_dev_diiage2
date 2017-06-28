@@ -22,7 +22,7 @@ namespace MesReservations.DAL
         }
     
         public int ID_Profil { get; set; }
-        public string NomProfil { get; set; }
+        public string Nom_Profil { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Utilisateur> Utilisateur { get; set; }

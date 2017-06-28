@@ -8,5 +8,19 @@ namespace MesReservations.Models
 {
     class Ressourcem
     {
+        //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Nom_Ressource
+        public string Nom { get; set; }
+        //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Disponibilite
+        public int Disponibilite { get; set; }
+        //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Description
+        public string Description { get; set; }
+        //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Date_Achat
+        public DateTime Date_Achat { get; set; }
+        //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut QRCode
+        public string QRCode { get; set; }
+        //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Purge
+        public Boolean Purge { get; set; }
+        //définition public du getter permettant d'acceder aux données et du setter permettant de modifier les données pour l'attribut Nom_Genre
+        public string Nom_Genre { get; set; }
     }
 }

@@ -21,7 +21,7 @@ namespace MesReservations.DAL
         }
     
         public int ID_User { get; set; }
-        public string Nom { get; set; }
+        public string Nom_Utilisateur { get; set; }
         public string Prenom { get; set; }
         public string Mail { get; set; }
         public string Password { get; set; }

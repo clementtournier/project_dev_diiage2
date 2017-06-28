@@ -18,14 +18,14 @@
             <PropertyRef Name="ID_Fonctionnalite" />
           </Key>
           <Property Name="ID_Fonctionnalite" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nom" Type="varchar" MaxLength="50" />
+          <Property Name="Nom_Fonctionnalite" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Genre">
           <Key>
             <PropertyRef Name="ID_Genre" />
           </Key>
           <Property Name="ID_Genre" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nom" Type="varchar" MaxLength="50" />
+          <Property Name="Nom_Genre" Type="varchar" MaxLength="50" />
           <Property Name="Description" Type="varchar" MaxLength="250" />
           <Property Name="Purge" Type="bit" />
         </EntityType>
@@ -45,7 +45,7 @@
             <PropertyRef Name="ID_Profil" />
           </Key>
           <Property Name="ID_Profil" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NomProfil" Type="varchar" MaxLength="50" />
+          <Property Name="Nom_Profil" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Reservation">
           <Key>
@@ -63,7 +63,7 @@
             <PropertyRef Name="ID_Ressource" />
           </Key>
           <Property Name="ID_Ressource" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nom" Type="varchar" MaxLength="50" />
+          <Property Name="Nom_Ressource" Type="varchar" MaxLength="50" />
           <Property Name="Disponibilite" Type="int" />
           <Property Name="Description" Type="varchar" MaxLength="50" />
           <Property Name="Date_Achat" Type="date" />
@@ -86,7 +86,7 @@
             <PropertyRef Name="ID_User" />
           </Key>
           <Property Name="ID_User" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nom" Type="varchar" MaxLength="50" />
+          <Property Name="Nom_Utilisateur" Type="varchar" MaxLength="50" />
           <Property Name="Prenom" Type="varchar" MaxLength="50" />
           <Property Name="Mail" Type="varchar" MaxLength="50" />
           <Property Name="Password" Type="varchar" MaxLength="50" />
@@ -228,7 +228,7 @@
             <PropertyRef Name="ID_Fonctionnalite" />
           </Key>
           <Property Name="ID_Fonctionnalite" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nom_Fonctionnalite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Profil" Relationship="Self.Acceder" FromRole="Fonctionnalite" ToRole="Profil" />
         </EntityType>
         <EntityType Name="Genre">
@@ -236,7 +236,7 @@
             <PropertyRef Name="ID_Genre" />
           </Key>
           <Property Name="ID_Genre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nom_Genre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="Purge" Type="Boolean" />
           <NavigationProperty Name="Ressource" Relationship="Self.FK__RESSOURCE__ID_Ge__2D27B809" FromRole="Genre" ToRole="Ressource" />
@@ -259,7 +259,7 @@
             <PropertyRef Name="ID_Profil" />
           </Key>
           <Property Name="ID_Profil" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NomProfil" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nom_Profil" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Utilisateur" Relationship="Self.FK__UTILISATE__ID_Pr__300424B4" FromRole="Profil" ToRole="Utilisateur" />
           <NavigationProperty Name="Fonctionnalite" Relationship="Self.Acceder" FromRole="Profil" ToRole="Fonctionnalite" />
         </EntityType>
@@ -281,7 +281,7 @@
             <PropertyRef Name="ID_Ressource" />
           </Key>
           <Property Name="ID_Ressource" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nom_Ressource" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Disponibilite" Type="Int32" />
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Date_Achat" Type="DateTime" Precision="0" />
@@ -306,7 +306,7 @@
             <PropertyRef Name="ID_User" />
           </Key>
           <Property Name="ID_User" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nom_Utilisateur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -425,7 +425,7 @@
             <EntityTypeMapping TypeName="BDD_GRP2Model.Fonctionnalite">
               <MappingFragment StoreEntitySet="Fonctionnalite">
                 <ScalarProperty Name="ID_Fonctionnalite" ColumnName="ID_Fonctionnalite" />
-                <ScalarProperty Name="Nom" ColumnName="Nom" />
+                <ScalarProperty Name="Nom_Fonctionnalite" ColumnName="Nom_Fonctionnalite" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -433,7 +433,7 @@
             <EntityTypeMapping TypeName="BDD_GRP2Model.Genre">
               <MappingFragment StoreEntitySet="Genre">
                 <ScalarProperty Name="ID_Genre" ColumnName="ID_Genre" />
-                <ScalarProperty Name="Nom" ColumnName="Nom" />
+                <ScalarProperty Name="Nom_Genre" ColumnName="Nom_Genre" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Purge" ColumnName="Purge" />
               </MappingFragment>
@@ -455,7 +455,7 @@
             <EntityTypeMapping TypeName="BDD_GRP2Model.Profil">
               <MappingFragment StoreEntitySet="Profil">
                 <ScalarProperty Name="ID_Profil" ColumnName="ID_Profil" />
-                <ScalarProperty Name="NomProfil" ColumnName="NomProfil" />
+                <ScalarProperty Name="Nom_Profil" ColumnName="Nom_Profil" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -475,7 +475,7 @@
             <EntityTypeMapping TypeName="BDD_GRP2Model.Ressource">
               <MappingFragment StoreEntitySet="Ressource">
                 <ScalarProperty Name="ID_Ressource" ColumnName="ID_Ressource" />
-                <ScalarProperty Name="Nom" ColumnName="Nom" />
+                <ScalarProperty Name="Nom_Ressource" ColumnName="Nom_Ressource" />
                 <ScalarProperty Name="Disponibilite" ColumnName="Disponibilite" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Date_Achat" ColumnName="Date_Achat" />
@@ -500,7 +500,7 @@
             <EntityTypeMapping TypeName="BDD_GRP2Model.Utilisateur">
               <MappingFragment StoreEntitySet="Utilisateur">
                 <ScalarProperty Name="ID_User" ColumnName="ID_User" />
-                <ScalarProperty Name="Nom" ColumnName="Nom" />
+                <ScalarProperty Name="Nom_Utilisateur" ColumnName="Nom_Utilisateur" />
                 <ScalarProperty Name="Prenom" ColumnName="Prenom" />
                 <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="Password" ColumnName="Password" />

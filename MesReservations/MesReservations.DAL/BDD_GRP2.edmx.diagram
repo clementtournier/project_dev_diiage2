@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a5e9d55fa901470986eb97d6db47b890" Name="Diagram1">
+      <Diagram DiagramId="9980e1000fa245c8b73856955a25e3b7" Name="Diagram1">
         <EntityTypeShape EntityType="BDD_GRP2Model.Fonctionnalite" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BDD_GRP2Model.Genre" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BDD_GRP2Model.Ligne_Reservation" Width="1.5" PointX="9.75" PointY="1.25" IsExpanded="true" />

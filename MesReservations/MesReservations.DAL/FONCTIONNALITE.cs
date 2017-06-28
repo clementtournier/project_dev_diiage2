@@ -21,7 +21,7 @@ namespace MesReservations.DAL
         }
     
         public int ID_Fonctionnalite { get; set; }
-        public string Nom { get; set; }
+        public string Nom_Fonctionnalite { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Profil> Profil { get; set; }
