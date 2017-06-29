@@ -26,12 +26,13 @@ namespace MesReservations.Models
         //définition public du getter permettant d'acceder au données et du setter permettant de modifier les données pour l'attribut ID_User
         public int ID_User { get; set; }
         public int ID_Profil { get; set; }
-        //Constructeur Vide qui permet l'utilisation du model sans utiliser tous les attributs
+        
+        //Constructeur Vide qui permet l'utilisation du model sans utiliser les attributs
         public Userm()
         {
 
         }
-        //Contructeur par défaut avec tout les attributs
+        //Contructeur par défaut avec tous les attributs
         public Userm(string n, string pr, string m, string pa, string np,DateTime ll, int d,Boolean pu, int uid,int pid)
         {
             Nom_User = n;
