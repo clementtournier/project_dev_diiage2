@@ -7,3 +7,8 @@ C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservati
 C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.MODEL\obj\Debug\MesReservations.MODEL.csprojResolveAssemblyReference.cache
 C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.MODEL\obj\Debug\MesReservations.MODEL.dll
 C:\Users\sebastien\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.MODEL\obj\Debug\MesReservations.MODEL.pdb
+C:\Users\Gabin\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.MODEL\bin\Debug\MesReservations.MODEL.dll
+C:\Users\Gabin\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.MODEL\bin\Debug\MesReservations.MODEL.pdb
+C:\Users\Gabin\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.MODEL\obj\Debug\MesReservations.MODEL.csprojResolveAssemblyReference.cache
+C:\Users\Gabin\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.MODEL\obj\Debug\MesReservations.MODEL.dll
+C:\Users\Gabin\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.MODEL\obj\Debug\MesReservations.MODEL.pdb
