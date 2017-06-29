@@ -31,13 +31,10 @@ namespace MesReservations.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Utilisateur utilisateur = db.Utilisateur.Find(id);
             Userm utilisateur = new Userm();
             utilisateur = BLuser.getUserbyId((int)id);
-           
-
-
-            if (utilisateur.ID_User == null)
+          
+            if (utilisateur == null)
             {
                 return HttpNotFound();
             }
@@ -56,16 +53,18 @@ namespace MesReservations.WEB.Controllers
         // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_User,Nom_Utilisateur,Prenom,Mail,Password,Last_login,Deconnexion,Purge,ID_Profil")] Utilisateur utilisateur)
+        public ActionResult Create([Bind(Include = "Nom_User,Prenom,Mail,Password,Last_login,Deconnexion,Nom_Profil,Purge")] Userm utilisateur)
         {
-            if (ModelState.IsValid)
+           /* if (ModelState.IsValid)
             {
                 db.Utilisateur.Add(utilisateur);
                 db.SaveChanges();
                 return RedirectToAction("Index");
+            }*/
+            if (ModelState.IsValid)
+            {
+                BLuser.setCreateUser(utilisateur.Nom_User, utilisateur.Prenom, utilisateur.Mail, utilisateur.Password, utilisateur.Last_Login, utilisateur.Deconnexion, utilisateur.Nom_Profil);
             }
-
-            ViewBag.ID_Profil = new SelectList(db.Profil, "ID_Profil", "Nom_Profil", utilisateur.ID_Profil);
             return View(utilisateur);
         }
 
@@ -76,12 +75,13 @@ namespace MesReservations.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Utilisateur utilisateur = db.Utilisateur.Find(id);
+            //Utilisateur utilisateur = db.Utilisateur.Find(id);
+            Userm utilisateur = new Userm();
+            utilisateur = BLuser.getUserbyId((int)id);
             if (utilisateur == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.ID_Profil = new SelectList(db.Profil, "ID_Profil", "Nom_Profil", utilisateur.ID_Profil);
             return View(utilisateur);
         }
 
@@ -90,15 +90,12 @@ namespace MesReservations.WEB.Controllers
         // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_User,Nom_Utilisateur,Prenom,Mail,Password,Last_login,Deconnexion,Purge,ID_Profil")] Utilisateur utilisateur)
+        public ActionResult Edit([Bind(Include = "Nom_User,Prenom,Mail,Password,Last_Login,Deconnexion,ID_User,Nom_Profil,Purge")] Userm utilisateur)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(utilisateur).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                BLuser.setEditUser(utilisateur.Nom_User, utilisateur.Prenom, utilisateur.Mail, utilisateur.Password, utilisateur.Last_Login, utilisateur.Deconnexion,utilisateur.ID_User,utilisateur.Nom_Profil,utilisateur.Purge);
             }
-            ViewBag.ID_Profil = new SelectList(db.Profil, "ID_Profil", "Nom_Profil", utilisateur.ID_Profil);
             return View(utilisateur);
         }
 
