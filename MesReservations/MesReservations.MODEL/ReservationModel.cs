@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MesReservations.WEB.Models
+namespace MesReservations.Models
 {
     public class ReservationModel
     {
@@ -19,16 +20,23 @@ namespace MesReservations.WEB.Models
 
         public int id_User { get; set; }
 
+        public String Nom_User { get; set; }
+
+
+        public ReservationModel()
+        {
+
+        }
+
+        public ReservationModel(int id_Resa, DateTime ddr, DateTime dfr, DateTime dr, Boolean p, int id_U)
+        {
+            id_Reservation = id_Resa;
+            Date_Debut_Resa = ddr;
+            Date_Fin_Resa = dfr;
+            Date_Resa = dr;
+            Purge = p;
+            id_User = id_U;
+        }
+
     }
-
-    //public ReservationModel()
-    //{
-
-    //}
-
-    //public ReservationModel(int id_Resa, DateTime ddr, DateTime dfr, DateTime)
-    //{
-
-    //}
-
 }
