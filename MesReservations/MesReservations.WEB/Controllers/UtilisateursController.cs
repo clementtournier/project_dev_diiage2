@@ -13,8 +13,9 @@ namespace MesReservations.WEB.Controllers
 {
     public class UtilisateursController : Controller
     {
-        private BDD_GRP2Entities db = new BDD_GRP2Entities();
+        // On instancie un utilisateurBL pour utiliser les fonctions codées dedans
         private UtilisateurBL BLuser = new UtilisateurBL();
+
         // GET: Utilisateurs
         public ActionResult Index()
         {
@@ -116,15 +117,6 @@ namespace MesReservations.WEB.Controllers
             }
             return RedirectToAction("Index");
             
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
     }
 }

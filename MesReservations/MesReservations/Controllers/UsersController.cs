@@ -12,35 +12,22 @@ namespace MesReservations.Controllers
 {
     public class UsersController : ApiController
     {
+        // On instancie un utilisateurBL pour utiliser les fonctions codées dedans
         private UtilisateurBL BLuser = new UtilisateurBL();
 
         // GET: api/Users
         public List<Userm> Get()
         {
+            // On appelle la fonction getUserAll de UtilisateurBL
             return BLuser.getUserAll();
         }
 
         // GET: api/Users/5
-        public string Get(int id)
+        public Userm Get(int id)
         {
-            return "value";
+            // On appelle la fonction getUserById de UtilisateurBL
+            return BLuser.getUserbyId(id);
         }
-
-        // POST: api/Users
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT: api/Users/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Users/5
-        public void Delete(int id)
-        {
-        }
-
-
+        
     }
 }
