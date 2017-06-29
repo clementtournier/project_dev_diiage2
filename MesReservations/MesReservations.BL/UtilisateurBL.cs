@@ -88,8 +88,10 @@ namespace MesReservations.BL
             utilisateur.Deconnexion = deconnexion;
             utilisateur.ID_Profil = db.Profil.Where(v => v.Nom_Profil == nom_profil).FirstOrDefault().ID_Profil;
             utilisateur.Purge = false;
+
             db.Utilisateur.Add(utilisateur);
             db.SaveChanges();
+
             Userm user = new Userm();
             user.Nom_User = utilisateur.Nom_Utilisateur;
             user.Prenom = utilisateur.Prenom;

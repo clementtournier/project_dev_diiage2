@@ -148,6 +148,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LigneResaController.cs" />
     <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\UtilisateursController.cs" />
     <Compile Include="Global.asax.cs">
@@ -198,8 +199,9 @@
     <Content Include="Views\Utilisateurs\Edit.cshtml" />
     <Content Include="Views\Utilisateurs\Index.cshtml" />
     <Content Include="Views\Reservation\Index.cshtml" />
-    <Content Include="Views\Reservation\Edit.cshtml" />
     <Content Include="Views\Reservation\Details.cshtml" />
+    <Content Include="Views\Reservation\Edit.cshtml" />
+    <Content Include="Views\LigneResa\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
