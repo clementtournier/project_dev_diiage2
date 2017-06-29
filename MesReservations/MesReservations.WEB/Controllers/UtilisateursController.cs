@@ -18,8 +18,6 @@ namespace MesReservations.WEB.Controllers
         // GET: Utilisateurs
         public ActionResult Index()
         {
-            //var utilisateur = db.Utilisateur.Include(u => u.Profil).Where(w => w.Purge != true);
-            //return View(utilisateur.ToList());
             List<Userm> utilisateur = new List<Userm>();
             utilisateur = BLuser.getUserAll();
             return View(utilisateur);
@@ -44,7 +42,6 @@ namespace MesReservations.WEB.Controllers
         // GET: Utilisateurs/Create
         public ActionResult Create()
         {
-            ViewBag.ID_Profil = new SelectList(db.Profil, "ID_Profil", "Nom_Profil");
             return View();
         }
 
@@ -55,17 +52,11 @@ namespace MesReservations.WEB.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Nom_User,Prenom,Mail,Password,Last_login,Deconnexion,Nom_Profil,Purge")] Userm utilisateur)
         {
-           /* if (ModelState.IsValid)
-            {
-                db.Utilisateur.Add(utilisateur);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }*/
             if (ModelState.IsValid)
             {
                 BLuser.setCreateUser(utilisateur.Nom_User, utilisateur.Prenom, utilisateur.Mail, utilisateur.Password, utilisateur.Last_Login, utilisateur.Deconnexion, utilisateur.Nom_Profil);
             }
-            return View(utilisateur);
+            return View();
         }
 
         // GET: Utilisateurs/Edit/5
@@ -75,7 +66,6 @@ namespace MesReservations.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Utilisateur utilisateur = db.Utilisateur.Find(id);
             Userm utilisateur = new Userm();
             utilisateur = BLuser.getUserbyId((int)id);
             if (utilisateur == null)
@@ -106,7 +96,8 @@ namespace MesReservations.WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Utilisateur utilisateur = db.Utilisateur.Find(id);
+            Userm utilisateur = new Userm();
+            utilisateur = BLuser.getUserbyId((int)id);
             if (utilisateur == null)
             {
                 return HttpNotFound();
@@ -119,11 +110,12 @@ namespace MesReservations.WEB.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Utilisateur utilisateur = db.Utilisateur.Find(id);
-            utilisateur.Purge = true;
-            db.Entry(utilisateur).State = EntityState.Modified;
-            db.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                BLuser.setRemoveUser(id);
+            }
             return RedirectToAction("Index");
+            
         }
 
         protected override void Dispose(bool disposing)
