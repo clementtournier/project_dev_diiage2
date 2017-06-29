@@ -49,15 +49,15 @@ namespace MesReservations.WEB.Controllers
         // POST: Utilisateurs/Create
         // Afin de déjouer les attaques par sur-validation, activez les propriétés spécifiques que vous voulez lier. Pour 
         // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost, ActionName("Create")]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Nom_User,Prenom,Mail,Password,Last_login,Deconnexion,Nom_Profil,Purge")] Userm utilisateur)
+        public ActionResult CreateConfirmed([Bind(Include = "Nom_User,Prenom,Mail,Password,Last_login,Deconnexion,Nom_Profil")] Userm utilisateur)
         {
             if (ModelState.IsValid)
             {
                 BLuser.setCreateUser(utilisateur.Nom_User, utilisateur.Prenom, utilisateur.Mail, utilisateur.Password, utilisateur.Last_Login, utilisateur.Deconnexion, utilisateur.Nom_Profil);
             }
-            return View();
+            return RedirectToAction("Index");
         }
 
         // GET: Utilisateurs/Edit/5
