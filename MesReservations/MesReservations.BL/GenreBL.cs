@@ -2,6 +2,7 @@
 using MesReservations.MODEL;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,6 +42,27 @@ namespace MesReservations.BL
             }).FirstOrDefault();
 
             return GenreById;
+        }
+        // Editer le genre
+        public GenreModel setEditGenre(int id_genre, string nom_genre, string description, Boolean purge)
+        {
+            // On lie les réponses du formulaire d'édition qui seront en paramètres à un Utilisateur de la BDD
+            Genre genre = new Genre();
+            genre.ID_Genre = id_genre;
+            genre.Nom_Genre = nom_genre;
+            genre.Description = description;
+            genre.Purge = purge;
+
+            // Envoi de l'utilisateur dans la BDD
+            db.Entry(genre).State = EntityState.Modified;
+            db.SaveChanges();
+
+            // Création de l'utilisateur précédemment créé suivant le modèle
+            GenreModel genrem = new GenreModel();
+            genrem.nom_genre = genrem.nom_genre;
+            genrem.description = genrem.description;
+            genrem.purge = (Boolean)genrem.purge;
+            return genrem;
         }
     }
 }
