@@ -69,5 +69,33 @@ namespace MesReservations.BL
             return reservationm;
         }
 
+
+        public void setCreateResa(DateTime Date_Debut_Resa, DateTime Date_Fin_Resa, DateTime Date_Resa, string Nom_User, Boolean purge)
+        {
+            // On lie les réponses du formulaire d'ajout qui seront en paramètres à une reservation de la BDD
+            Reservation reservation = new Reservation();
+            reservation.Date_Debut_Reservation = Date_Debut_Resa;
+            reservation.Date_Fin_Reservation = Date_Fin_Resa;
+            reservation.Date_Reservation = Date_Resa;
+            reservation.ID_User = db.Utilisateur.Where(v => v.Nom_Utilisateur == Nom_User).FirstOrDefault().ID_User;
+            reservation.Purge = false;
+
+            // On ajoute la reservation
+            db.Reservation.Add(reservation);
+            db.SaveChanges();
+        }
+
+        public void setRemoveResa(int id_Reservation)
+        {
+            // On récupère la reservation suivant son id
+            Reservation reservation = db.Reservation.FirstOrDefault(r => r.ID_Reservation == id_Reservation);
+
+            // On passe l'élément "purge" à true
+            reservation.Purge = true;
+
+            // On applique ces changements
+            db.Entry(reservation).State = EntityState.Modified;
+            db.SaveChanges();
+        }
     }
 }

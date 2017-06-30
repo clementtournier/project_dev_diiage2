@@ -38,5 +38,13 @@ namespace MesReservations.Models
             id_User = id_U;
         }
 
+        public ReservationModel(DateTime ddr, DateTime dfr, DateTime dr, Boolean p, int id_U)
+        {
+            Date_Debut_Resa = ddr;
+            Date_Fin_Resa = dfr;
+            Date_Resa = dr;
+            Purge = p;
+            id_User = id_U;
+        }
     }
 }

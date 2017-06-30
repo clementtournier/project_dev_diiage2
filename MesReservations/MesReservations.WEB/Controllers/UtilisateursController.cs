@@ -6,7 +6,6 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using MesReservations.DAL;
 using MesReservations.Models;
 using MesReservations.BL;
 namespace MesReservations.WEB.Controllers
@@ -49,9 +48,9 @@ namespace MesReservations.WEB.Controllers
         // POST: Utilisateurs/Create
         // Afin de déjouer les attaques par sur-validation, activez les propriétés spécifiques que vous voulez lier. Pour 
         // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost, ActionName("Create")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateConfirmed([Bind(Include = "Nom_User,Prenom,Mail,Password,Last_login,Deconnexion,Nom_Profil")] Userm utilisateur)
+        public ActionResult Create([Bind(Include = "Nom_User,Prenom,Mail,Password,Last_login,Deconnexion,Nom_Profil")] Userm utilisateur)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +86,7 @@ namespace MesReservations.WEB.Controllers
             {
                 BLuser.setEditUser(utilisateur.Nom_User, utilisateur.Prenom, utilisateur.Mail, utilisateur.Password, utilisateur.Last_Login, utilisateur.Deconnexion,utilisateur.ID_User,utilisateur.Nom_Profil,utilisateur.Purge);
             }
-            return View(utilisateur);
+            return RedirectToAction("Index");
         }
 
         // GET: Utilisateurs/Delete/5

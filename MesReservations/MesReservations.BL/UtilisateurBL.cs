@@ -26,7 +26,8 @@ namespace MesReservations.BL
                 Last_Login = (DateTime)u.Last_login,
                 Deconnexion = (int)u.Deconnexion,
                 Purge = (Boolean)u.Purge,
-                ID_User = (int)u.ID_User
+                ID_User = (int)u.ID_User,
+                ID_Profil = (int)u.ID_Profil
             });
 
             List<Userm> userAll = new List<Userm>();
@@ -49,7 +50,8 @@ namespace MesReservations.BL
                 Last_Login = (DateTime)u.Last_login,
                 Deconnexion = (int)u.Deconnexion,
                 Purge = (Boolean)u.Purge,
-                ID_User = (int)u.ID_User
+                ID_User = (int)u.ID_User,
+                ID_Profil = (int)u.ID_Profil
             }).FirstOrDefault();
 
             return UtilisateurById;
@@ -70,7 +72,7 @@ namespace MesReservations.BL
             utilisateur.ID_Profil = db.Profil.Where(v => v.Nom_Profil == nom_profil).FirstOrDefault().ID_Profil;
             utilisateur.Purge = purge;
             
-            // Envoi de l'utilisateur dans la BDD
+            // Envoi de la modification des données de l'utilisateur dans la BDD
             db.Entry(utilisateur).State = EntityState.Modified;
             db.SaveChanges();
 
