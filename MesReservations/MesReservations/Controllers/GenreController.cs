@@ -4,29 +4,28 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using MesReservations.Models;
 using MesReservations.BL;
+using MesReservations.MODEL;
 
 namespace MesReservations.Controllers
 {
-    public class UsersController : ApiController
+    public class GenreController : ApiController
     {
         // On instancie un utilisateurBL pour utiliser les fonctions codées dedans
-        private UtilisateurBL BLuser = new UtilisateurBL();
+        private GenreBL BLgenre = new GenreBL();
 
         // GET: api/Users
-        public List<Userm> Get()
+        public List<GenreModel> Get()
         {
             // On appelle la fonction getUserAll de UtilisateurBL
-            return BLuser.getUserAll();
+            return BLgenre.getGenreAll();
         }
 
         // GET: api/Users/5
-        public Userm Get(int id)
+        public GenreModel Get(int id)
         {
             // On appelle la fonction getUserById de UtilisateurBL
-            return BLuser.getUserbyId(id);
+            return BLgenre.getGenrebyId(id);
         }
-        
     }
 }
