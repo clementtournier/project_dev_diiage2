@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\MesReservations"
+    "\\MesReservations",
+    "\\MesReservations\\MesReservations.WEB\\Controllers"
   ],
   "SelectedNode": "\\MesReservations\\MesReservations.sln",
   "PreviewInSolutionExplorer": false

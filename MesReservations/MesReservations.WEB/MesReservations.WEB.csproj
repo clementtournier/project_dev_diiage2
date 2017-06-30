@@ -202,6 +202,10 @@
     <Content Include="Views\Reservation\Details.cshtml" />
     <Content Include="Views\Reservation\Edit.cshtml" />
     <Content Include="Views\LigneResa\Index.cshtml" />
+    <Content Include="Views\LigneResa\Edit.cshtml" />
+    <Content Include="Views\LigneResa\Details.cshtml" />
+    <Content Include="Views\LigneResa\Create.cshtml" />
+    <Content Include="Views\LigneResa\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
