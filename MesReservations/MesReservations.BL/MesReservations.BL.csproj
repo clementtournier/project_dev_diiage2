@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LigneResaBL.cs" />
+    <Compile Include="ProfilBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReservationBL.cs" />
     <Compile Include="UtilisateurBL.cs" />
