@@ -50,6 +50,7 @@
     <Compile Include="LigneResaBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReservationBL.cs" />
+    <Compile Include="RessourceBL.cs" />
     <Compile Include="UtilisateurBL.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -46,14 +46,5 @@ namespace MesReservations.Models
             ID_User = uid;
             ID_Profil = pid;
         }
-        public Userm(string n, string pr, string m, string pa, DateTime ll, int d)
-        {
-            Nom_User = n;
-            Prenom = pr;
-            Mail = m;
-            Password = pa;
-            Last_Login = ll;
-            Deconnexion = d;
-        }
     }
 }
