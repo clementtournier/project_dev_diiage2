@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FonctionnaliteModel.cs" />
     <Compile Include="GenreModel.cs" />
     <Compile Include="LigneResaModel.cs" />
     <Compile Include="ProfilModel.cs" />
