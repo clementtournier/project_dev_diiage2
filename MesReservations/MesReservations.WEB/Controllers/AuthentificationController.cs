@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MesReservations.Models;
+using MesReservations.MODEL;
 using MesReservations.BL;
 using System.Web.UI;
 using System.Web.UI.WebControls;
