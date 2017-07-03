@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MesReservations.DAL;
-using MesReservations.Models;
 using System.Data.Entity;
+using MesReservations.MODEL;
 
 namespace MesReservations.BL
 {
@@ -55,6 +55,27 @@ namespace MesReservations.BL
             }).FirstOrDefault();
 
             return UtilisateurById;
+        }
+
+        // Récupérer les utilisateurs qui ont purge à True
+        public List<Userm> getUserNoPurge()
+        {
+            var UtilisateurNoPurge = db.Utilisateur.Where(p => p.Purge == false).Select(u => new Userm()
+            {
+                Nom_User = u.Nom_Utilisateur,
+                Prenom = u.Prenom,
+                Mail = u.Mail,
+                Password = u.Password,
+                Nom_Profil = db.Profil.FirstOrDefault(v => v.ID_Profil == u.ID_Profil).Nom_Profil,
+                Last_Login = (DateTime)u.Last_login,
+                Deconnexion = (int)u.Deconnexion,
+                Purge = (Boolean)u.Purge,
+                ID_User = (int)u.ID_User,
+                ID_Profil = (int)u.ID_Profil
+            }).ToList();
+            
+
+            return UtilisateurNoPurge;
         }
 
         // Editer l'utilisateur

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="GenreModel.cs" />
     <Compile Include="LigneResaModel.cs" />
+    <Compile Include="ProfilModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReservationModel.cs" />
     <Compile Include="RessourceModel.cs" />

@@ -7,8 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MesReservations.DAL;
-using MesReservations.Models;
 using MesReservations.BL;
+using MesReservations.MODEL;
 
 namespace MesReservations.WEB.Controllers
 {
@@ -20,7 +20,7 @@ namespace MesReservations.WEB.Controllers
         public ActionResult Index()
         {
             List<ReservationModel> reservation = new List<ReservationModel>();
-            reservation = BLresa.getResaAll();
+            reservation = BLresa.getResaNoPurge();
             return View(reservation);
 
         }

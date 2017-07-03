@@ -185,6 +185,7 @@
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LigneResaController.cs" />
+    <Compile Include="Controllers\ProfilController.cs" />
     <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\RessourceController.cs" />
     <Compile Include="Controllers\UsersController.cs" />

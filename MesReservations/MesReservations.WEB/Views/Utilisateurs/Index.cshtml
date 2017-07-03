@@ -1,21 +1,22 @@
-﻿@model List<MesReservations.Models.Userm>
-    @{
-        ViewBag.Title = "Index";
-        
-    }
+﻿@model List<MesReservations.MODEL.Userm>
+@{
+    ViewBag.Title = "Index";
 
-    <h2>Index</h2>
+}
 
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" id="dt-table">
+    <thead>
         <tr>
             <th>
-               <h4>Nom Utilisateur</h4>
+                <h4>Nom Utilisateur</h4>
             </th>
             <th>
-               <h4>Prenom</h4>
+                <h4>Prenom</h4>
             </th>
             <th>
                 <h4>Email</h4>
@@ -27,13 +28,15 @@
                 <h4>Last_Login</h4>
             </th>
             <th>
-               <h4>Deconnexion</h4>
+                <h4>Deconnexion</h4>
             </th>
             <th>
-              <h4>Nom Profil</h4>
+                <h4>Nom Profil</h4>
             </th>
             <th></th>
         </tr>
+    </thead>
+    <tbody>
 
         @foreach (var item in Model)
         {
@@ -60,11 +63,24 @@
                     @Html.DisplayFor(modelItem => item.Nom_Profil)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID_User}) |
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID_User }) |
                     @Html.ActionLink("Details", "Details", new { id = item.ID_User }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.ID_User })
                 </td>
             </tr>
+
         }
 
-    </table>
+    </tbody>
+
+</table>
+
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#dt-table').DataTable();
+        });
+    </script>
+}
