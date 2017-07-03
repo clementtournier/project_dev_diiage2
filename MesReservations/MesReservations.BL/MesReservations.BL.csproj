@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FonctionnaliteBL.cs" />
     <Compile Include="GenreBL.cs" />
     <Compile Include="LigneResaBL.cs" />
     <Compile Include="ProfilBL.cs" />
