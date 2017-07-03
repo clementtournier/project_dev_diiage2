@@ -54,7 +54,6 @@ C:\Users\Bertrand\Source\Repos\project_dev_diiage2\MesReservations\MesReservatio
 C:\Users\Bertrand\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Bertrand\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.DAL\bin\Debug\fr\EntityFramework.resources.dll
 C:\Users\Bertrand\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.DAL\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
-C:\Users\Bertrand\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.DAL\obj\Debug\MesReservations.DAL.csprojResolveAssemblyReference.cache
 C:\Users\Bertrand\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.DAL\obj\Debug\MesReservations.DAL.dll
 C:\Users\Bertrand\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.DAL\obj\Debug\MesReservations.DAL.pdb
 D:\Documents\Source\Repos\project_dev_diiage2\MesReservations\MesReservations.DAL\bin\Debug\MesReservations.DAL.dll.config

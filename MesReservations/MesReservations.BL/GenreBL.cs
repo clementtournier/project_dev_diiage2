@@ -14,7 +14,7 @@ namespace MesReservations.BL
     {
         private BDD_GRP2Entities db = new BDD_GRP2Entities();
 
-        // Récupérer tous les users
+        // Récupérer tous les genre
         public List<GenreModel> getGenreAll()
         {
             var lesGenres = db.Genre.Select(u => new GenreModel()
@@ -31,6 +31,7 @@ namespace MesReservations.BL
 
             return GenreAll;
         }
+
         public GenreModel getGenrebyId(int id)
         {
             var GenreById = db.Genre.Where(p => p.ID_Genre == id).Select(u => new GenreModel()
@@ -64,5 +65,34 @@ namespace MesReservations.BL
             genrem.purge = (Boolean)genrem.purge;
             return genrem;
         }
+
+        //création d'un genre
+        public void setCreateGenre(string Nom_genre, string description)
+        {
+            // On lie les réponses du formulaire d'ajout qui seront en paramètres à un Utilisateur de la BDD
+            Genre genre = new Genre();
+            genre.Nom_Genre = Nom_genre;
+            genre.Description = description;
+            genre.Purge = false;
+
+            // On ajoute le genre
+            db.Genre.Add(genre);
+            db.SaveChanges();
+        }
+
+        public void setRemoveGenre(int id_genre)
+        {
+            // On récupère le genre suivant son id
+            Genre genre = db.Genre.FirstOrDefault(g => g.ID_Genre == id_genre);
+
+            // On passe l'élément "purge" à true
+            genre.Purge = true;
+
+            // On applique ces changements
+            db.Entry(genre).State = EntityState.Modified;
+            db.SaveChanges();
+        }
+
+
     }
 }

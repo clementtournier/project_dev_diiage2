@@ -67,5 +67,55 @@ namespace MesReservations.WEB.Controllers
             return View(genre);
         }
 
+
+        // GET: Genre/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Genre/Create
+        // Afin de déjouer les attaques par sur-validation, activez les propriétés spécifiques que vous voulez lier. Pour 
+        // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "Nom_Genre,Description")] GenreModel genre)
+        {
+            if (ModelState.IsValid)
+            {
+                BLgenre.setCreateGenre(genre.nom_genre, genre.description);
+            }
+            return RedirectToAction("Index");
+        }
+
+
+        // GET: Genre/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            GenreModel genre = new GenreModel();
+            genre = BLgenre.getGenrebyId((int)id);
+            if (genre == null)
+            {
+                return HttpNotFound();
+            }
+            return View(genre);
+        }
+
+        // POST: Genre/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                BLgenre.setRemoveGenre(id);
+            }
+            return RedirectToAction("Index");
+
+        }
     }
 }
