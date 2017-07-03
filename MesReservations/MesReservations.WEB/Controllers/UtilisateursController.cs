@@ -6,8 +6,9 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using MesReservations.Models;
 using MesReservations.BL;
+using MesReservations.MODEL;
+
 namespace MesReservations.WEB.Controllers
 {
     public class UtilisateursController : Controller
