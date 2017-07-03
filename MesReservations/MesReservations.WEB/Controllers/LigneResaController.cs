@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MesReservations.DAL;
-using MesReservations.Models;
 using MesReservations.BL;
 using MesReservations.MODEL;
 using System.Net;

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MesReservations.DAL;
-using MesReservations.Models;
 using System.Data.Entity;
+using MesReservations.MODEL;
 
 namespace MesReservations.BL
 {
