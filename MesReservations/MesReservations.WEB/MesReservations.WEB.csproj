@@ -147,6 +147,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\FonctionnaliteController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LigneResaController.cs" />
@@ -208,6 +209,9 @@
     <Content Include="Views\Genre\Index.cshtml" />
     <Content Include="Views\Genre\Details.cshtml" />
     <Content Include="Views\Genre\Edit.cshtml" />
+    <Content Include="Views\Fonctionnalite\Index.cshtml" />
+    <Content Include="Views\Fonctionnalite\Edit.cshtml" />
+    <Content Include="Views\Fonctionnalite\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
