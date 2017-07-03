@@ -49,6 +49,21 @@ namespace MesReservations.BL
 
         }
 
+        public List<LigneResaModel> getLigneResaNoPurge()
+        {
+            var LigneResaNoPurge = db.Ligne_Reservation.Where(y => y.Purge == false).Select(l => new LigneResaModel()
+            {
+                ID_Ligne_Reservation = l.ID_Ligne_Reservation,
+                Date_Debut = (DateTime)l.Date_Debut,
+                Date_Fin = (DateTime)l.Date_Fin,
+                ID_Reservation = l.ID_Reservation,
+                ID_Ressource = l.ID_Ressource
+
+            }).ToList();
+
+            return LigneResaNoPurge;
+        }
+
         // Editer la ligne de reservation
         public LigneResaModel setEditLigneResa(int id_Ligne_Resa, DateTime date_debut, DateTime date_fin, int  id_ressource, int id_reservation, Boolean purge)
         {

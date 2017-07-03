@@ -20,7 +20,7 @@ namespace MesReservations.WEB.Controllers
         public ActionResult Index()
         {
             List<ReservationModel> reservation = new List<ReservationModel>();
-            reservation = BLresa.getResaAll();
+            reservation = BLresa.getResaNoPurge();
             return View(reservation);
 
         }
@@ -37,7 +37,7 @@ namespace MesReservations.WEB.Controllers
 
 
 
-            if (reservation.id_Reservation == null)
+            if (reservation == null)
             {
                 return HttpNotFound();
             }

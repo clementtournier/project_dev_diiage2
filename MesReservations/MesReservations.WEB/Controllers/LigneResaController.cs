@@ -18,7 +18,7 @@ namespace MesReservations.WEB.Controllers
         public ActionResult Index()
         {
             List<LigneResaModel> ligneresa = new List<LigneResaModel>();
-            ligneresa = BLligneresa.getLigneResaAll();
+            ligneresa = BLligneresa.getLigneResaNoPurge();
             return View(ligneresa);
         }
 

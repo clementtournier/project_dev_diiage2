@@ -20,7 +20,7 @@ namespace MesReservations.WEB.Controllers
         public ActionResult Index()
         {
             List<Userm> utilisateur = new List<Userm>();
-            utilisateur = BLuser.getUserAll();
+            utilisateur = BLuser.getUserNoPurge();
             return View(utilisateur);
         }
         // GET: Utilisateurs/Details/5

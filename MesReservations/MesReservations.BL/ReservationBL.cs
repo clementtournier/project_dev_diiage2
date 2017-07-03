@@ -48,6 +48,22 @@ namespace MesReservations.BL
 
         }
 
+        public List<ReservationModel> getResaNoPurge()
+        {
+            var ReservationNoPurge = db.Reservation.Where(p => p.Purge == false).Select(r => new ReservationModel()
+            {
+                id_Reservation = r.ID_Reservation,
+                Date_Debut_Resa = (DateTime)r.Date_Debut_Reservation,
+                Date_Fin_Resa = (DateTime)r.Date_Fin_Reservation,
+                Date_Resa = (DateTime)r.Date_Reservation,
+                Nom_User = db.Utilisateur.Where(v => v.ID_User == r.ID_User).FirstOrDefault().Nom_Utilisateur
+
+            }).ToList();
+
+
+            return ReservationNoPurge;
+        }
+
         public ReservationModel setEditResa(int id_Reservation, DateTime Date_Debut_Resa, DateTime Date_Fin_Resa, DateTime Date_Resa, string Nom_User, Boolean purge)
         {
             Reservation reservation = new Reservation();
