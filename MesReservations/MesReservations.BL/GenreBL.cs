@@ -67,11 +67,10 @@ namespace MesReservations.BL
         }
 
         //création d'un genre
-        public void setCreateGenre(int id_genre, string Nom_genre, string description)
+        public void setCreateGenre(string Nom_genre, string description)
         {
             // On lie les réponses du formulaire d'ajout qui seront en paramètres à un Utilisateur de la BDD
             Genre genre = new Genre();
-            genre.ID_Genre = id_genre;
             genre.Nom_Genre = Nom_genre;
             genre.Description = description;
             genre.Purge = false;
@@ -80,5 +79,20 @@ namespace MesReservations.BL
             db.Genre.Add(genre);
             db.SaveChanges();
         }
+
+        public void setRemoveGenre(int id_genre)
+        {
+            // On récupère le genre suivant son id
+            Genre genre = db.Genre.FirstOrDefault(g => g.ID_Genre == id_genre);
+
+            // On passe l'élément "purge" à true
+            genre.Purge = true;
+
+            // On applique ces changements
+            db.Entry(genre).State = EntityState.Modified;
+            db.SaveChanges();
+        }
+
+
     }
 }
