@@ -37,7 +37,7 @@ namespace MesReservations.WEB.Controllers
 
 
 
-            if (reservation.id_Reservation == null)
+            if (reservation == null)
             {
                 return HttpNotFound();
             }

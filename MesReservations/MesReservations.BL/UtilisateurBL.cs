@@ -120,5 +120,16 @@ namespace MesReservations.BL
             db.Entry(utilisateur).State = EntityState.Modified;
             db.SaveChanges();
         }
+        public Userm  getTestConnexion(string mail, string password)
+        {
+            var UtilisateurById = db.Utilisateur.Where(p => p.Mail == mail).Select(u => new Userm()
+            {
+                Mail = u.Mail,
+                Password = u.Password,
+                ID_Profil = u.ID_Profil
+            }).FirstOrDefault();
+
+            return UtilisateurById;
+        }
     }
 }
