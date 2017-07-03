@@ -6,8 +6,9 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using MesReservations.Models;
 using MesReservations.BL;
+using MesReservations.MODEL;
+
 namespace MesReservations.WEB.Controllers
 {
     public class UtilisateursController : Controller
@@ -19,7 +20,7 @@ namespace MesReservations.WEB.Controllers
         public ActionResult Index()
         {
             List<Userm> utilisateur = new List<Userm>();
-            utilisateur = BLuser.getUserAll();
+            utilisateur = BLuser.getUserNoPurge();
             return View(utilisateur);
         }
         // GET: Utilisateurs/Details/5

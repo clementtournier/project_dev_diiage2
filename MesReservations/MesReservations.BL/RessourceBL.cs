@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MesReservations.DAL;
-using MesReservations.Models;
 using System.Data.Entity;
+using MesReservations.MODEL;
 
 namespace MesReservations.BL
 {
@@ -48,6 +48,25 @@ namespace MesReservations.BL
                 ID_Genre = (int)r.ID_Genre
             }).FirstOrDefault();
             return RessourcesById;
+        }
+
+        public List<RessourceModel> getRessourceNoPurge()
+        {
+            var RessourceNoPurge = db.Ressource.Where(p => p.Purge == false).Select(r => new RessourceModel()
+            {
+                Nom_Ressource = r.Nom_Ressource,
+                Disponibilite = (int)r.Disponibilite,
+                Description = r.Description,
+                Date_Achat = (DateTime)r.Date_Achat,
+                QRCode = r.QRCode,
+                Purge = (Boolean)r.Purge,
+                Nom_Genre = db.Genre.Where(g => g.ID_Genre == r.ID_Genre).FirstOrDefault().Nom_Genre,
+                ID_Ressource = (int)r.ID_Ressource,
+                ID_Genre = (int)r.ID_Genre
+            }).ToList();
+
+
+            return RessourceNoPurge;
         }
 
         //Editer la ressource

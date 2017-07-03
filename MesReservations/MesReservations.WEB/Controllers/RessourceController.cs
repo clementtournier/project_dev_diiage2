@@ -17,7 +17,7 @@ namespace MesReservations.WEB.Controllers
         public ActionResult Index()
         {
             List<RessourceModel> ressource = new List<RessourceModel>();
-            ressource = BLRessource.getRessourceAll();
+            ressource = BLRessource.getRessourceNoPurge();
             return View(ressource);
         }
         //GET : Ressource/Details/5
