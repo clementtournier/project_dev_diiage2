@@ -467,6 +467,13 @@
     <Content Include="Views\Genre\Delete.cshtml" />
     <Content Include="Views\Profil\Details.cshtml" />
     <Content Include="Views\Profil\Index.cshtml" />
+    <Content Include="Views\Ressource\Create.cshtml" />
+    <Content Include="Views\Ressource\Delete.cshtml" />
+    <Content Include="Views\Ressource\Details.cshtml" />
+    <Content Include="Views\Ressource\Edit.cshtml" />
+    <Content Include="Views\Ressource\Index.cshtml" />
+    <Content Include="Views\Reservation\Create.cshtml" />
+    <Content Include="Views\Reservation\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
