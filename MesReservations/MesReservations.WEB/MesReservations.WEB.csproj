@@ -206,6 +206,7 @@
     <Content Include="Views\LigneResa\Details.cshtml" />
     <Content Include="Views\LigneResa\Create.cshtml" />
     <Content Include="Views\LigneResa\Delete.cshtml" />
+    <Content Include="Views\Genre\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
